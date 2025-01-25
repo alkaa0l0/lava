@@ -1,0 +1,891 @@
+/* style.css */
+
+/* Глобальный сброс */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Отключаем прокрутку по умолчанию */
+    font-family: 'Inter', Helvetica, sans-serif;
+    background-color: #161622;
+}
+
+/* Контейнер "экрана" */
+.phone-frame {
+    width: 100%;
+    max-width: 430px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #161622;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; /* Дополнительная защита от переполнения */
+}
+
+/* Шапка */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    background-color: transparent;
+}
+
+/* Кнопки и ссылки в шапке */
+.back-button, .wallet-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.wallet-link span {
+    margin-left: 8px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Заголовок в шапке */
+header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Основной контент */
+main {
+    flex: 1;
+    padding: 16px;
+    overflow: hidden; /* Избегаем вертикальной прокрутки */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #fff;
+}
+
+/* Группа кнопок */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.button {
+    width: 100%;
+    height: 56px;
+    background-color: #0066ff;
+    border: none;
+    border-radius: 16px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.button img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Нижнее меню */
+footer.bottom-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #27273a;
+    height: 83px;
+    flex-shrink: 0;
+}
+
+/* Пункты меню */
+.bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #949494;
+    font-size: 11px;
+    font-family: 'Inter', sans-serif;
+}
+
+.bottom-nav .nav-item.active {
+    color: #fff;
+}
+
+.bottom-nav .nav-item .icon {
+    margin-bottom: 4px;
+}
+
+  /* ------------------------------------------- */
+  /* Общий стиль "шапки" (header) + баланс-виджет */
+  /* ------------------------------------------- */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* SVG-иконки */
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor; /* Цвет наследуется от родителя */
+}
+
+  header {
+    position: relative;
+    height: 60px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    flex-shrink: 0; /* чтобы шапка не сжималась */
+    border-bottom: 1px солид rgba(255, 255, 255, 0.1); /* лёгкая линия */
+    margin-bottom: 16px;
+  }
+  
+  /* Пример "аватарки" или кружка слева */
+  .ellipse,
+  .user-avatar {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    object-fit: cover;
+  }
+  
+  /* Текстовое название/имя в шапке */
+  .text-wrapper,
+  .user-name {
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    margin-left: 12px;
+    white-space: nowrap;
+  }
+  
+  /* Блок с балансом справа (widget) */
+  .overlap,
+  .balance {
+    margin-left: auto;  /* Прижать к правому краю */
+    background-color: #27273a;
+    border-radius: 15.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 12px;
+    height: 31px;
+  }
+  
+  .group,
+  .balance-icon {
+    width: 18px;
+    height: 20px;
+  }
+  
+  .vector,
+  .balance-arrow {
+    width: 21px;
+    height: 21px;
+  }
+  
+  .text-wrapper-2,
+  .balance-amount {
+    font-family: "Inter", Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  /* ------------------------------------------- */
+  /* Общие кнопки в главном контенте (примеры)   */
+  /* ------------------------------------------- */
+  
+  .button-group {
+    flex: 1;                 /* Чтобы main растягивался */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+  
+  .button {
+    width: 100%;
+    height: 56px;
+    background-color: #0066ff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 16px;
+    color: #ffffff;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 16px;
+    gap: 10px;
+  }
+  
+  .button img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  /* ------------------------------------------- */
+  /* НИЖНЯЯ НАВИГАЦИЯ (footer или nav)           */
+  /* ------------------------------------------- */
+  /* Нижнее меню */
+  footer {
+    width: 100%;
+    height: 83px;
+    background: #27273A;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  footer a {
+    text-decoration: none;
+    text-align: center;
+    color: #949494;
+    font-size: 11px;
+  }
+
+  footer a img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  footer a span {
+    margin-top: 5px;
+    display: block;
+  }
+
+  /* Подсвечиваем активный элемент */
+  .footer-profile span {
+    color: #fff;
+  }
+
+  
+  footer.view,
+  .main-navigation,
+  .bottom-nav,
+  .wallet__navigation {
+    background-color: #27273a;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 83px;
+    flex-shrink: 0; /* чтобы не сжималось */
+  }
+  
+  /* Унификация для ссылок/пунктов меню */
+  footer.view div,
+  .main-navigation ul,
+  .bottom-nav,
+  .wallet__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer.view div,
+  .main-navigation li,
+  .bottom-nav a,
+  .wallet__navigation a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #939393;
+  }
+  
+  .text-wrapper-9 {
+    font-family: "Inter", Helvetica, sans-serif;
+    font-size: 11px;
+    color: #939393;
+    margin-top: 4px;
+  }
+  
+  /* Состояние активных пунктов меню (пример) */
+  .nav-item.active span,
+  .bottom-nav a.active span,
+  .wallet__nav-item--active .wallet__nav-text {
+    color: #ffffff;
+  }
+  
+  /* Иконки в нижнем меню */
+  footer.view img,
+  .main-navigation img,
+  .bottom-nav img,
+  .wallet__nav-icon {
+    width: 25px;
+    height: auto;
+  }
+  
+  /* ---------------------------------------------- */
+  /* СТИЛИ ДЛЯ news.html                            */
+  /* ---------------------------------------------- */
+  
+  /* Пример обёртки .NEWS + .container */
+  .NEWS .container {
+    padding: 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* Шапка там своя, но можем переиспользовать логику */
+  .NEWS header {
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Аватар + имя */
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Чуть подкорректируем .user-avatar если нужно */
+  .user-avatar {
+    width: 41px;
+    height: 41px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+  }
+  
+  .user-name {
+    margin: 0 0 0 12px;
+  }
+  
+  /* Виджет баланса (right) */
+  .balance {
+    margin-left: auto;
+    background-color: #27273a;
+    border-radius: 15.5px;
+    padding: 0 12px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  /* Секция новостей */
+  .news-feed {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Отдельная новость */
+  .news-item {
+    background-color: #27273a;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  
+  .news-title {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .news-content {
+    font-size: 14px;
+    margin: 0;
+    color: #ccc;
+    font-family: "Inter", sans-serif;
+  }
+  
+  /* Меню внизу (ul, li) */
+  .main-navigation ul {
+    list-style: none;
+  }
+  
+  .main-navigation li {
+    flex: 1;
+  }
+  
+  .main-navigation .nav-item {
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 11px;
+    color: #939393;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .main-navigation .nav-item img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 4px;
+  }
+  
+  /* ---------------------------------------------- */
+  /* СТИЛИ ДЛЯ profile.html                         */
+  /* ---------------------------------------------- */
+  
+  .profile {
+    padding: 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .profile header {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .profile .avatar {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .profile h1 {
+    margin: 12px 0 4px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+  }
+  
+  .user-role {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .user-handle {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Блок со статистикой */
+  .user-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* По 2 в строке */
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .stat-item {
+    background-color: #27273a;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .stat-item h2 {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .stat-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .stat-icon {
+    margin-left: auto;
+    width: 25px;
+    height: 25px;
+  }
+  
+  /* Финансовая информация */
+  .financial-info {
+    background-color: #27273a;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .financial-info .balance {
+    margin-left: 0; /* чтобы не мешало нашему общему правилу */
+    height: auto;
+    padding: 0;
+    background: transparent;
+    display: block;
+    border-radius: 0;
+  }
+  
+  .financial-info h2 {
+    margin: 0 0 8px;
+    font-size: 14px;
+  }
+  
+  .financial-info p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  /* Кнопки */
+  .settings-button,
+  .support-button {
+    width: 100%;
+    background-color: #0066ff;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    padding: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .settings-icon,
+  .support-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Нижнее меню */
+  .bottom-nav {
+    margin-top: auto; /* прижать к низу */
+    height: 83px;
+  }
+  
+  .bottom-nav a {
+    flex: 1;
+    text-decoration: none;
+    color: #939393;
+    font-size: 11px;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bottom-nav a.active span {
+    color: #ffffff;
+  }
+  
+  .bottom-nav .nav-icon {
+    width: 25px;
+    height: auto;
+    margin-bottom: 4px;
+  }
+  
+  /* ---------------------------------------------- */
+  /* СТИЛИ ДЛЯ wallet.html                          */
+  /* ---------------------------------------------- */
+  
+  .wallet__container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    flex: 1;
+  }
+  
+  /* Шапка кошелька (только иконка меню слева) */
+  .wallet__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+  }
+  
+  .wallet__menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .wallet__menu-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  /* Секция с "картой" */
+  .wallet__card-section {
+    margin-bottom: 16px;
+  }
+  
+  .wallet__card {
+    position: relative;
+    width: 100%;
+    background-color: #27273a;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .wallet__card-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    opacity: 0.2;
+  }
+  
+  .wallet__card-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* "Чип" карты */
+  .wallet__card-chip {
+    display: flex;
+    gap: 2px;
+  }
+  
+  /* Номер карты */
+  .wallet__card-number {
+    font-size: 16px;
+    margin: 0;
+    letter-spacing: 2px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Имя владельца */
+  .wallet__card-name {
+    font-size: 14px;
+    margin: 0;
+    color: #ccc;
+  }
+  
+  /* Данные карты (срок, CVV) */
+  .wallet__card-details {
+    display: flex;
+    gap: 24px;
+  }
+  .wallet__card-details p {
+    margin: 0;
+    font-size: 14px;
+  }
+  .wallet__card-label {
+    color: #666;
+  }
+  .wallet__card-value {
+    font-weight: bold;
+  }
+  
+  /* Логотип бренда (MasterCard) */
+  .wallet__card-brand {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wallet__card-brand-logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 25px;
+  }
+  .wallet__card-brand-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .wallet__card-brand-circle--red {
+    background-color: red;
+    left: 0;
+  }
+  .wallet__card-brand-circle--orange {
+    background-color: orange;
+    right: 0;
+  }
+  .wallet__card-brand-name {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  /* Кнопки пополнить/снять/баланс */
+  .wallet__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .wallet__action-button {
+    flex: 1;
+    background-color: #0066ff;
+    border: none;
+    border-radius: 12px;
+    height: 48px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .wallet__action-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .wallet__action-text {
+    font-size: 14px;
+  }
+  
+  .wallet__balance {
+    background-color: #27273a;
+    border-radius: 12px;
+    padding: 0 12px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .wallet__balance-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .wallet__balance-amount {
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  /* История транзакций */
+  .wallet__transactions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .wallet__transactions-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .wallet__transactions-title {
+    margin: 0;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .wallet__transactions-button {
+    background: none;
+    border: none;
+    color: #0066ff;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  
+  .wallet__transaction-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .wallet__transaction-item {
+    background-color: #27273a;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .wallet__transaction-details p {
+    margin: 0;
+  }
+  .wallet__transaction-name {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .wallet__transaction-description {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .wallet__transaction-amount {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .wallet__transaction-amount--positive {
+    color: #2ecc71;
+  }
+  .wallet__transaction-amount--negative {
+    color: #e74c3c;
+  }
+  
+  /* Навигация внизу */
+  .wallet__navigation {
+    margin-top: auto;
+    height: 83px;
+  }
+  
+  .wallet__nav-item {
+    flex-direction: column;
+    text-decoration: none;
+    color: #939393;
+    font-size: 11px;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wallet__nav-icon {
+    margin-bottom: 4px;
+    width: 25px;
+    height: auto;
+  }
+  
+  .wallet__nav-text {
+    color: inherit;
+  }
+  
+  /* Активная ссылка */
+  .wallet__nav-item--active .wallet__nav-text {
+    color: #ffffff;
+  }

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <title>Lavina Scama - Бонусы</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    @media (max-width: 768px) {
+      .text-wrapper {
+        font-size: 16px;
+      }
+      .button img {
+        width: 35px;
+        height: 35px;
+      }
+      .button .text {
+        font-size: 12px;
+      }
+      footer.view {
+        height: 70px;
+      }
+    }
+    
+    /* Нижнее меню */
+    footer {
+      width: 100%;
+      height: 83px;
+      background: #27273A;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    footer a {
+      text-decoration: none;
+      text-align: center;
+      color: #949494;
+      font-size: 11px;
+    }
+
+    footer a img {
+      width: 24px;
+      height: 24px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    footer a span {
+      margin-top: 5px;
+      display: block;
+    }
+
+    /* Подсвечиваем активный элемент */
+    .footer-profile span {
+      color: #fff;
+    }
+
+    /* Стили для изображения */
+    .image-container {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .bonus-image {
+      width: 80%; /* Adjust the width as needed */
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto; /* Center the image */
+    }
+  </style>
+</head>
+<body style="margin: 0; background: #161622;">
+<div class="phone-frame" style="
+  width: 430px;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  background: #161622;
+  display: flex;
+  flex-direction: column;
+">
+
+  <!-- Шапка -->
+  <header style="
+    height: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+  ">
+    <!-- Кнопка «Назад» -->
+    <a href="index.php" style="
+      display: inline-flex;
+      width: 42px; height: 42px;
+      background: #1E1E2D;
+      border-radius: 9999px;
+      border: 1px solid #ffffff;
+      text-decoration: none;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+    ">
+      <!-- Иконка back.png -->
+      <img
+        src="img/back.png"
+        alt="Back"
+        style="width: 20px; height: 20px;"
+      />
+    </a>
+
+    <h1 style="
+      margin: 0;
+      margin-left: 12px;
+      color: white;
+      font-size: 26px;
+      font-family: Bebas Neue, sans-serif;
+    ">Бонусы</h1>
+  </header>
+
+  <!-- Основной контент -->
+  <main style="
+    flex: 1;
+    position: relative;
+    padding-bottom: 83px;
+    padding: 16px;
+    box-sizing: border-box;
+  ">
+    <!-- Карта bonus_cart.png -->
+    <div class="image-container">
+      <img
+        src="img/bonus_cart.png"
+        alt="Bonus Card"
+        class="bonus-image"
+      />
+    </div>
+
+    <p style="
+      color: #7E848D; font-size: 14px;
+      font-family: Bebas Neue, sans-serif;
+      margin-top: 20px;
+    ">
+      <strong>Важные детали:</strong><br/>
+      Начисление бонусов происходит автоматически сразу после покупки.
+      Бонусные баллы могут иметь срок действия – следите за актуальной информацией в личном кабинете.
+      Условия бонусной программы могут меняться, поэтому рекомендуем периодически знакомиться с обновлениями во вкладке “Новости” на нашем сайте.
+    </p>
+
+    <!-- Баланс -->
+    <div style="
+      margin-top: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+      font-family: Inter, sans-serif;
+    ">
+      Ваш бонусный баланс: <b>0 $</b>
+    </div>
+
+    <!-- Кнопка «Стать участником» -->
+    <button style="
+      width: 335px; height: 56px;
+      display: block;
+      margin: 24px auto;
+      background: #0066FF;
+      border: none;
+      border-radius: 16px;
+      color: #fff;
+      font-size: 16px;
+      font-family: Poppins, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+    ">
+      Стать участником
+    </button>
+  </main>
+
+  
+  <footer>
+    <a href="profile.html">
+      <img src="img/first_icon.png" alt="Home"/>
+      <span>Главная</span>
+    </a>
+    <a href="news.html">
+      <img src="img/news_icon.png" alt="News"/>
+      <span>Новости</span>
+    </a>
+    <a href="index.php" class="footer-profile">
+      <img src="img/profile_icon.png" alt="Profile"/>
+      <span>Профиль</span>
+    </a>
+  </footer>
+</div>
+</body>
+</html>

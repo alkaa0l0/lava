@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+<!-- Внутри <head> каждой HTML-страницы -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lavina Scama - Главная</title>
+  <!-- Подключаем ваши CSS-файлы -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<style>
+@media (max-width: 768px) {
+  .text-wrapper {
+    font-size: 16px;
+  }
+  .button img {
+    width: 35px;
+    height: 35px;
+  }
+  .button .text {
+    font-size: 12px;
+  }
+  footer.view {
+    height: 70px;
+  }
+}
+
+    /* Нижнее меню */
+    footer {
+      width: 100%;
+      height: 83px;
+      background: #27273A;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    footer a {
+      text-decoration: none;
+      text-align: center;
+      color: #949494;
+      font-size: 11px;
+    }
+
+    footer a img {
+      width: 24px;
+      height: 24px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    footer a span {
+      margin-top: 5px;
+      display: block;
+    }
+
+  </style>
+<body style="margin: 0; padding: 0; background: #161622;">
+<div class="phone-frame">
+  <!-- ШАПКА -->
+  <header>
+    <img class="user-avatar" src="img/ellipse.png" alt="User avatar" />
+    <div class="text-wrapper">LAVINA SCAMA</div>
+
+    <!-- Ссылка на кошелёк -->
+    <a href="wallet.php" style="
+      margin-left: auto;
+      display: inline-flex;
+      width: 104px; height: 31px;
+      background: #27273a;
+      border-radius: 15.5px;
+      align-items: center;
+      justify-content: space-around;
+      text-decoration: none;
+    ">
+      <img src="img/wallet.png" alt="Wallet" style="width: 18px; height: 20px;" />
+      <span style="
+        color: #fff; font-size: 16px;
+        font-family: Inter, sans-serif;
+      ">0 $</span>
+      <img src="img/plus.png" alt="Plus" style="width: 21px; height: 21px;" />
+    </a>
+  </header>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ (4 кнопки) -->
+  <main class="button-group">
+    <div class="button">
+      <img src="img/Vector.png" alt="Icon" />
+      <span class="text">Физические номера</span>
+    </div>
+    
+    <div class="button">
+      <img src="img/i 1 (Traced).png" alt="Icon" />
+      <span class="text">Сайты</span>
+    </div>
+
+    <div class="button">
+      <a href="glavnya/shop-viewer.php"> 
+      <img src="img/vec6.png" alt="Icon" />
+      <span class="text">Шопы</span>
+    </div>
+
+    <div class="button">
+      <a href="glavnya/designs-viewer.php"> 
+      <img src="img/vector4.svg" alt="Icon" />
+      <span class="text">Дизайн</span>
+    </div>
+  </main>
+
+
+  <footer>
+    <a href="profile.html">
+      <img src="img/first_icon.png" alt="Home"/>
+      <span>Главная</span>
+    </a>
+    <a href="news.html">
+      <img src="img/news_icon.png" alt="News"/>
+      <span>Новости</span>
+    </a>
+    <a href="index.php" class="footer-profile">
+      <img src="img/profile_icon.png" alt="Profile"/>
+      <span>Профиль</span>
+    </a>
+  </footer>
+</div>
+</body>
+</html>

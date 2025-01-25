@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Настройки</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="margin: 0; padding: 0; background: #161622;">
+<div class="phone-frame">
+  <!-- ШАПКА -->
+  <header style="
+    height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-sizing: border-box;
+  ">
+    <a href="profile.html" style="text-decoration: none; color: #fff;">
+      <img src="img/back.png" alt="Back" style="width: 24px; height: 24px;">
+    </a>
+    <h1 style="font-size: 20px; color: white; margin: 0;">Настройки</h1>
+  </header>
+
+  <!-- Основной контент -->
+  <main style="padding: 16px;">
+    <!-- Выбор часового пояса -->
+    <section style="margin-bottom: 20px;">
+      <h2 style="color: white; font-size: 18px;">Часовой пояс</h2>
+      <select style="
+        width: 100%;
+        padding: 8px;
+        background: #27273A;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        margin-top: 10px;
+      ">
+        <option value="UTC+0">UTC+0</option>
+        <option value="UTC+1">UTC+1</option>
+        <option value="UTC+2">UTC+2</option>
+        <option value="UTC+3">UTC+3</option>
+        <option value="UTC+4">UTC+4</option>
+        <option value="UTC+5">UTC+5</option>
+      </select>
+    </section>
+
+    <!-- Смена темы -->
+    <section style="margin-bottom: 20px;">
+      <h2 style="color: white; font-size: 18px;">Сменить тему</h2>
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <button style="
+          flex: 1;
+          background: #FFFFFF;
+          color: #000;
+          border: none;
+          border-radius: 8px;
+          padding: 10px;
+          cursor: pointer;
+        " onclick="setTheme('light')">Светлая</button>
+        <button style="
+          flex: 1;
+          background: #000000;
+          color: #FFF;
+          border: none;
+          border-radius: 8px;
+          padding: 10px;
+          cursor: pointer;
+        " onclick="setTheme('dark')">Темная</button>
+      </div>
+    </section>
+
+    <!-- Кнопка Админ Панель -->
+    <div class="buttons">
+        <a href="admin.php" id="adminLink" class="button">Админ Панель</a>
+      </div>
+
+<script>
+  function setTheme(theme) {
+    if (theme === 'light') {
+      document.body.style.background = '#FFFFFF';
+      document.body.style.color = '#000000';
+    } else {
+      document.body.style.background = '#161622';
+      document.body.style.color = '#FFFFFF';
+    }
+  }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const username = urlParams.get('username') || 'unknown_user';
+
+      const adminLink = document.getElementById('adminLink');
+      adminLink.href = `admin.php?username=${encodeURIComponent(username)}`;
+    });
+  </script>
+
+
+</body>
+</html>
